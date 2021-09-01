@@ -1,0 +1,56 @@
+<div class="container" style="margin-top: 80px;">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg" alt="" id="ProductMainImage">
+            
+        </div>
+        <div class="col-md-6 col-12">
+          <h1 class="productheader mb-4">Baking Dish Set of 2 - White</h1>
+          <p class="productdescription" style="margin-right: 10%;">Product description here</p> 
+
+          <!-- Product Count Incrementer -->
+<div class="row">
+  <div class="col">
+     <button onClick='decrement()'>-</button> 
+  </div>
+  <div class="col">
+      <p id="productcount"># to show</p>
+   </div>
+   <div class="col">
+      <button onClick='increment()'>+</button>
+   </div>
+   <div class="col">
+       <a href="https://kivy-store.myshopify.com/cart/add?id=40286695424154&quantity=1" id="addtobasket">Add to your cart</a>
+   </div>
+</div>
+            <div class="mb-3">
+            
+            </div>
+
+            <div class="mb-3">
+              <input type="number" class="form-control" name="Quantity" id="quantity" value="1" min="1">
+            </div>
+            <div style="border-bottom: 3px solid black; padding-bottom: 40px;">
+              <input type="hidden" name="return_to" value="back" />
+              <button type="submit" name="add" id="AddToCart" class="btn termsbutton w-100">Add to your cart - {{ current_product.price | money }}</button>
+            </div>
+           
+            <div style="margin-bottom: 150px">
+              <div style="border-bottom: 1px solid black;">
+                <button onclick="return false" class="accordion" style="color: black;">+ Details</button>
+                  <div class="panel">
+                      <p class="accordiondescription">Product description here</p>
+                  </div>
+              </div>
+
+              <div style="border-bottom: 1px solid black;">
+                <button onclick="return false" class="accordion" style="color: black;">+ Shipping</button>
+                  <div class="panel">
+                    <p class="accordiondescription">Shipping usually takes 2-3 business days and products are shipped within one day.</p>
+                  </div>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

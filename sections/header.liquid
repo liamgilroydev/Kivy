@@ -1,0 +1,106 @@
+
+<div id="searchfield" style="background-color: #FAFAFA; display: none;">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-11">
+        <form action="/search" method="get" role="search">
+        <input style="width: 100%;" class="searchbox" type="search" name="q" placeholder="Search for products" value="{{ search.terms | escape }}">
+      </form>
+      </div>
+      <div class="col-1">
+        <p id="closesearch" class="float-end" style="color: gray; padding-top: 25px; cursor: pointer; font-family:'futura-pt'; font-weight: 100; font-size: 24px;" onclick="hideDiv()">x</p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    
+
+<nav class="navbar navbar-expand-lg navbar-light pb-3 pt-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">{{ 'Kivy_Logo.png' | asset_img_url: '50px' | img_tag }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="navlistitem">
+            <a id="shoplinkopen" class="nav-link" style="color: black; cursor: pointer;" onclick="showDropdown()">SHOP</a>
+            <a id="shoplinkclose" class="nav-link" style="color: black; cursor: pointer; display: none;" onclick="hideDropdown()">SHOP</a>
+          </li>
+          <li class="navlistitem">
+            <a class="nav-link" style="color: black; cursor: pointer;" href="/pages/about-us">ABOUT</a>
+          </li>
+          <li class="navlistitem">
+            <a class="nav-link" style="color: black; cursor: pointer;" href="/pages/contact">CONTACT</a>
+          </li>
+        </ul>
+
+      <!-- LOGIN & ACCOUNT BUTTONS -->
+
+       <!-- <ul class="navbar-nav">
+            {% if shop.customer_accounts_enabled %}
+                {% if customer %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ routes.account_url }}">{{ 'general.Layout.account_text' | t }}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ routes.account_logout_ur }}">{{ 'general.Layout.logout_text' | t }}</a>
+                </li>
+                {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ routes.account_login_url }}">{{ 'general.Layout.login_text' | t }}</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ routes.account_register_url }}">{{ 'general.Layout.register_text' | t }}</a>
+                    </li>
+                {% endif %}
+          {% endif %}
+          <li class="nav-item">
+
+          </li>
+        </ul>-->
+        
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="navlistitem">
+            <a class="nav-link" style="color: black;" href="#">EN</a>
+          </li>
+          <li class="navlistitem">
+            <a class="nav-link" style="color: black; cursor: pointer;" onclick="showDiv()">SEARCH</a>
+          </li>
+          <li class="navlistitem">
+            <a class="nav-link" style="color: black;" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false" href="#">CART</a>
+          </li>
+         </ul>
+      </div>
+    </div>
+
+ 
+    
+</nav>
+
+<hr style="margin-top: 6px; margin-bottom: 0;">
+
+<!-- Dropdown Section Starts -->
+  <div id="dropdown" class="container" style="display: none;">
+      <div class="row mt-5 mb-5">
+        <div class="col">
+          <a style="color: black; text-decoration: none;" href="/collections/all"><h3 class="menuitem" onmouseover="onHoverShopAll();" onmouseout="offHoverShopAll();">Shop All</h3></a>
+          <a style="color: black; text-decoration: none;" href="/pages/ceramic-baking-dishes"><h3 class="menuitem" onmouseover="onHoverCeramics();" onmouseout="offHoverCeramics();">Ceramic Baking Dishes</h3></a>
+          <a style="color: black; text-decoration: none;" href="/pages/glass-containers"><h3 class="menuitem" onmouseover="onHoverGlass();" onmouseout="offHoverGlass();">Glass Containers</h3></a>
+          <a style="color: black; text-decoration: none;" href="/pages/mugs-bowls"><h3 class="menuitem" onmouseover="onHoverMugs();" onmouseout="offHoverMugs();">Mugs & Bowls</h3></a>
+        </div>
+        <div class="col-lg-4 ms-auto">
+          <div class="row">
+            <img id="featuredimg" style="height:200px; width: 320px; float: right;" src="https://mdbootstrap.com/img/Photos/Others/images/76.jpg" alt="">
+          </div>
+          <div class="row">
+            <p class="menuimagealt" id="menuimagealt"></p>
+          </div>
+        </div>
+      </div>
+  </div>
+<!-- Dropdown Section Ends -->
+

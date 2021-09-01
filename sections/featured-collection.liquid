@@ -1,0 +1,82 @@
+<section class="container py-4 mt-5">
+    <h2 class="text-center my-3 mb-5" style="font-size: 30px; font-family: NarzissRegular;">{{ section.settings.title }}</h2>
+    
+    <div class="row">
+    {% for product in collections[section.settings.featured_collection].products %}
+    {% assign image = product.featured_media.preview_image %}
+        <div class="col">
+
+            <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+                <a class="ms-auto" style="font-size: 14px; font-family:'futura-pt'; color: black; text-decoration: none; margin: 20px;" href="{{ }}">+ ADD</a>
+                {% if image != blank %}
+                    <a href="{{ product.url }}"><img class="card-img-top" src="{{ image | img_url: 'large' }}" alt="{{ product.title }}"></a>
+                    {% else %}
+                        {{ 'product-1' | placeholder_svg_tag: 'card-img-top' }}
+                {% endif %}
+            </div>
+
+            <div>
+                <h3><a style="font-size: 14px; font-family:'futura-pt'; color: black; text-decoration: none; text-transform: uppercase;" href="{{ product.url }}">{{ product.title }}</a></h3>
+                <p style="color: gray; font-size: 14px; font-family:'futura-pt';" >{{ product.price | money }}</p>
+            </div>
+
+        </div>
+    {% endfor %}
+</div>
+
+<div class="text-center" style="margin-bottom: 60px; margin-top: 40px;">
+    <a href="/collections/all" class="blackbutton" style="color: white; text-decoration: none; font-family:'futura-pt'; text-transform: uppercase; padding-left: 30px; padding-right: 30px; padding-top: 10px; padding-bottom: 10px;">Discover More</a>
+</div>
+
+<script>
+    var url = document.getElementById('addtobasket').href;
+var urlPart1 = url.split('quantity=')[0]; //get the url till id
+var urlParameter = url.split('quantity=')[1]; //get the id paramerter
+var parameter = parseInt(urlParameter); // convert the id parameter into string
+
+function increment() {
+   parameter += 1;
+   var newURL = urlPart1 + "quantity=" + parameter;
+   document.getElementById('addtobasket').href = newURL;
+}
+
+function decrement() {
+   parameter -= 1;
+   var newURL = urlPart1 + "quantity=" + parameter;
+   document.getElementById('addtobasket').href = newURL;
+}
+
+</script>
+
+
+</section>
+
+
+{% schema %}
+{
+    "name": "Featured Collection", 
+    "class": "featured-collection-section",
+    "settings": [ 
+    
+    {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Collection"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "default": "Featured Collection",
+        "label": "Title"
+    }
+    ],
+    "presets": [
+    {
+        "category": "Collection",
+        "name": "Featured Collection"
+    }
+    
+    ]
+
+}
+{% endschema %}

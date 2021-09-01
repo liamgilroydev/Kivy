@@ -1,0 +1,31 @@
+<section class="inner-hero-section">
+    {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+    {% else %}
+        {% capture current %}{% cycle 1,2 %}{% endcapture %}
+        {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg'}}
+    {% endif %}
+
+    
+</section>
+
+{% schema %}
+{
+    "name": "Ceramic Hero",
+    "class": "hero-section",
+    "settings": [
+
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Heading Background Title"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Hero",
+            "name":"Ceramic Hero"
+        }
+    ]
+}
+{% endschema %}

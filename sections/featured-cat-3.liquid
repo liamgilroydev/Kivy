@@ -1,0 +1,53 @@
+<section>
+<div class="container" style="margin-bottom: 160px;">
+    <div class="row mt-5">
+        <div class="col">
+          <a href="/pages/mugs-bowls"><img src="{{ section.settings.image | img_url: '700x' }}" alt="{{ section.settings.image.alt }}"></a>
+        </div>
+    
+        <div class="col" style="padding-top: 300px;">
+            <a class="ftcatsub" href="/pages/mugs-bowls"><h5 class="ftcatsub">{{ section.settings.subtitle }}</h5></a>
+            <a class="ftdcatheader" href="/pages/mugs-bowls"><h2>{{ section.settings.title }}</h2></a>
+        </div>
+    
+      </div>
+</div>
+    
+    
+    </section>
+    
+    {% schema %}
+    {
+        "name": "Featured-Cat-3",
+        "class": "Featured-Cat-3",
+        "settings": [
+    
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image Tile"
+            },
+    
+            {
+                "type": "text",
+                "id": "subtitle",
+                "default": "Example Subtitle",
+                "label": "Heading Subtitle"
+            },
+    
+            {
+                "type": "text",
+                "id": "title",
+                "default": "Example Heading",
+                "label": "Heading Title"
+            }
+    
+        ],
+        "presets": [
+            {
+                "category": "Collection",
+                "name":"Featured Cat 3"
+            }
+        ]
+    }
+    {% endschema %}

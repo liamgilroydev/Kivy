@@ -1,0 +1,136 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-5" style="margin-top: 80px;">
+                <div class="col">
+                    <button class="termsbutton"  style="margin-top: 0px;">Shipping & Returns</button>
+                </div>
+                <div class="col">
+                    <a href="/pages/terms-conditions"><button class="termsbuttoninactive">Terms</button></a>
+                </div>
+                <div class="col">
+                    <a href="/pages/privacy-policy"><button class="termsbuttoninactive">Privacy</button></a>
+                </div>
+                <div class="col">
+                    <a href="/pages/cookies-policy"><button class="termsbuttoninactive">Cookies</button></a>
+                </div>
+                    
+            </div>
+            
+        <div class="col-lg-7 mb-5" style="width: 45%; margin-top: 80px;">
+                    <h2 class="termsheader mb-4">{{ section.settings.title }}</h2>
+                    <h5 class="termstext mb-4">{{ section.settings.shippingtitle }}</h5>
+                    <p class="termstext mb-5">{{ section.settings.shippinginfo }}</p>
+
+                    <h5 class="termstext mb-4">{{ section.settings.country }}</h5>
+                        <hr style="margin-bottom: 20px;">
+                    <div class="row" style="margin-bottom: -12px;">
+                        <div class="col-8">
+                            <p class="termstext">{{ section.settings.shippingcosttitle }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="termstext" style="text-align: right;">{{ section.settings.shippingcostamount }}</p>
+                        </div>
+                    </div>
+                        <hr>
+                    <div class="row mb-4">
+                        <div class="col-8">
+                            <p class="termstext">{{ section.settings.shippingcosttitle2 }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="termstext" style="text-align: right;">{{ section.settings.shippingcostamount2 }}</p>
+                        </div>
+                    </div>
+                    
+                    <h5 class="termstext mb-4">{{ section.settings.returnstitle }}</h5>
+                    <p class="termstext mb-5">{{ section.settings.returnsinfo }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Returns-Section",
+    "class": "Returns-Section",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Example Title",
+            "label": "Title"
+        },
+
+        {
+            "type": "text",
+            "id": "shippingtitle",
+            "default": "Shipping Title",
+            "label": "Shipping Title"
+        },
+
+        {
+            "type": "text",
+            "id": "shippinginfo",
+            "default": "Shipping Info",
+            "label": "Shipping Info"
+        },
+
+        {
+            "type": "text",
+            "id": "country",
+            "default": "Country",
+            "label": "Country"
+        },
+
+        {
+            "type": "text",
+            "id": "shippingcosttitle",
+            "default": "Shipping Cost Title",
+            "label": "Shipping Cost Title"
+        },
+
+        {
+            "type": "text",
+            "id": "shippingcostamount",
+            "default": "Shipping Cost Amount",
+            "label": "Shipping Cost Amount"
+        },
+
+        {
+            "type": "text",
+            "id": "shippingcosttitle2",
+            "default": "Shipping Cost 2 Title",
+            "label": "Shipping Cost 2 Title"
+        },
+
+        {
+            "type": "text",
+            "id": "shippingcostamount2",
+            "default": "Shipping Cost 2 Amount",
+            "label": "Shipping Cost 2 Amount"
+        },
+
+        {
+            "type": "text",
+            "id": "returnstitle",
+            "default": "Returns Title",
+            "label": "Returns Title"
+        },
+
+        {
+            "type": "text",
+            "id": "returnsinfo",
+            "default": "Returns Info",
+            "label": "Returns Info"
+        }
+
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name":"Returns Section"
+        }
+    ]
+}
+{% endschema %}

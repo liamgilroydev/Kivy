@@ -1,0 +1,54 @@
+<div class="row" style="margin-top: -86px;">
+    <div class="col-lg-6 bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');">
+    
+    </div>
+    <div class="col-lg-6" style="padding-left: 8%; padding-right: 8%; padding-top: 10%; margin-bottom: 12%;">
+        <h4 class="aboutheader mb-5" >{{ section.settings.title }}</h4>
+        <h2 class="aboutquote">{{ section.settings.quote }}</h2>
+        <p class="aboutbody mt-5">{{ section.settings.bodycopy }}</p>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "About-Page-Section",
+    "class": "About-Page-Section",
+    "settings": [
+
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Tile"
+        },
+
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Example Title",
+            "label": "Title"
+        },
+
+        {
+            "type": "text",
+            "id": "quote",
+            "default": "Example Quote",
+            "label": "Quote"
+        },
+
+        {
+            "type": "text",
+            "id": "bodycopy",
+            "default": "Example Body Copy",
+            "label": "Body"
+        }
+
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name":"About Page Section"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,87 @@
+{% assign current_product = product.selected_or_first_available_variant %}
+{% assign product_image = current_product.featured_image | default: product.featured_image %}
+
+
+<div class="container" style="margin-top: 80px;">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <img class="img-fluid" src="{{ product_image | img_url: 'large' }}" alt="{{ product_image.alt }}" id="ProductMainImage">
+
+            <!-- 
+            Other Images ---
+            {% for image in product.images %}
+              <img src="{{ image.src | img_url: 'medium' }}" alt="{{ image.alt }}">
+            {% endfor %} -->
+            
+        </div>
+        <div class="col-md-6 col-12">
+          <h1 class="productheader mb-4">{{ product.title }}</h1>
+          <p class="productdescription" style="margin-right: 10%;">{{ product.description }}</p> 
+
+          {% form 'product', product, class:"product-form", id:"AddToCartForm" %}
+            <div class="mb-3">
+              <select name="id" id="productSelect" class="form-select">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option value="{{ variant.id }}">
+                      {{ variant.title }}
+                    </option>
+                    {% else %}
+                      <option value="{{ variant.id }}" disabled="disabled">
+                        {{ variant.title }}
+                      </option>
+                   {% endif %}
+                  
+                  {% endfor %}
+                </select>
+              </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" name="Quantity" id="quantity" value="1" min="1">
+            </div>
+            <div style="border-bottom: 3px solid black; padding-bottom: 40px;">
+              <input type="hidden" name="return_to" value="back" />
+              <button type="submit" name="add" id="AddToCart" class="btn termsbutton w-100">Add to your cart - {{ current_product.price | money }}</button>
+            </div>
+           
+            <div style="margin-bottom: 150px">
+              <div style="border-bottom: 1px solid black;">
+                <button onclick="return false" class="accordion" style="color: black;">+ Details</button>
+                  <div class="panel">
+                      <p class="accordiondescription">{{ product.description }}</p>
+                  </div>
+              </div>
+
+              <div style="border-bottom: 1px solid black;">
+                <button onclick="return false" class="accordion" style="color: black;">+ Shipping</button>
+                  <div class="panel">
+                    <p class="accordiondescription">Shipping usually takes 2-3 business days and products are shipped within one day.</p>
+                  </div>
+              </div>
+            </div>
+           
+            {% if section.settings.dynamic_buttons_checkbox == true %}
+                {{ form | payment_button }}
+            {% endif %}
+
+            {% endform %}
+            
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product pages",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "dynamic_buttons_checkbox",
+            "label": "Enable Dynamic Buttons",
+            "default": false
+        }
+    ]
+}
+{% endschema %}
+
+
+

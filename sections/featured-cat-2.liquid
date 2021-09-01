@@ -1,0 +1,55 @@
+<section>
+    <div class="container" style="margin-top: 160px; margin-bottom: 160px;">
+        <div class="row">
+
+            <div class="col" style="padding-top: 500px; text-align: right; padding-right: 60px;">
+                <a class="ftcatsub" href="pages/glass-containers"><h5 class="ftcatsub">{{ section.settings.subtitle }}</h5></a>
+                <a class="ftdcatheader" href="pages/glass-containers"><h2>{{ section.settings.title }}</h2></a>
+            </div>
+
+            <div class="col">
+                <a href="pages/glass-containers"><img src="{{ section.settings.image | img_url: '500x' }}" alt="{{ section.settings.image.alt }}"></a>
+            </div>
+    
+        
+          </div>
+    </div>
+        
+        
+        </section>
+        
+        {% schema %}
+        {
+            "name": "Featured-Cat-2",
+            "class": "Featured-Cat-2",
+            "settings": [
+        
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image Tile"
+                },
+        
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "default": "Example Subtitle",
+                    "label": "Heading Subtitle"
+                },
+        
+                {
+                    "type": "text",
+                    "id": "title",
+                    "default": "Example Heading",
+                    "label": "Heading Title"
+                }
+        
+            ],
+            "presets": [
+                {
+                    "category": "Collection",
+                    "name":"Featured Cat 2"
+                }
+            ]
+        }
+        {% endschema %}

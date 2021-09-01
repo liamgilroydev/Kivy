@@ -1,0 +1,213 @@
+<section class="container py-4 mt-4">
+    <h2 class="text-center my-3 mb-3 termsheader" >{{ section.settings.title }}</h2>
+    <p class="text-center mb-5 termstext" style="margin-right: 20%; margin-left: 20%;">{{ section.settings.paragraph }}</p>
+
+<!-- ROW 1 Start -->
+<div class="row">
+        <div class="col">
+            <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+                <a href="{{ section.settings.prod1link }}"><img class="card-img-top" src="{{ section.settings.prod1img | img_url: 'master' }}"></a>
+            </div>
+            <div>
+                <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod1link }}">{{ section.settings.prod1title }}</a></h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+                <a href="{{ section.settings.prod2link }}"><img class="card-img-top" src="{{ section.settings.prod2img | img_url: 'master' }}"></a>
+            </div>
+            <div>
+                <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod2link }}">{{ section.settings.prod2title }}</a></h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+                <a href="{{ section.settings.prod3link }}"><img class="card-img-top" src="{{ section.settings.prod3img | img_url: 'master' }}"></a>
+            </div>
+            <div>
+                <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod3link }}">{{ section.settings.prod3title }}</a></h3>
+            </div>
+        </div>
+</div>
+<!-- ROW 1 End -->
+
+<!-- ROW 2 Start -->
+<div class="row mt-5">
+    <div class="col">
+        <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+            <a href="{{ section.settings.prod4link }}"><img class="card-img-top" src="{{ section.settings.prod4img | img_url: 'master' }}"></a>
+        </div>
+        <div>
+            <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod4link }}">{{ section.settings.prod4title }}</a></h3>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+            <a href="{{ section.settings.prod5link }}"><img class="card-img-top" src="{{ section.settings.prod5img | img_url: 'master' }}"></a>
+        </div>
+        <div>
+            <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod5link }}">{{ section.settings.prod5title }}</a></h3>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 100%; background-color: #FAFAFA; border: none; border-radius: 0;">
+            <a href="{{ section.settings.prod6link }}"><img class="card-img-top" src="{{ section.settings.prod6img | img_url: 'master' }}"></a>
+        </div>
+        <div>
+            <h3><a style="font-size: 14px; color: black; text-decoration: none; text-transform: uppercase;" href="{{ section.settings.prod6link }}">{{ section.settings.prod6title }}</a></h3>
+        </div>
+    </div>
+</div>
+<!-- ROW 2 End -->
+
+</section>
+
+{% schema %}
+{
+    "name": "Glass Containers Section",
+    "class": "Glass Containers Section",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Example Title",
+            "label": "Title"
+        },
+
+        {
+            "type": "text",
+            "id": "paragraph",
+            "default": "Example Paragraph",
+            "label": "Paragraph"
+        },
+
+         {
+            "type": "image_picker",
+            "id": "prod1img",
+            "label": "Product 1 Image"
+        },
+
+        {
+            "type": "text",
+            "id": "prod1link",
+            "default": "https://google.com/",
+            "label": "Product 1 Link"
+        },
+
+        {
+            "type": "text",
+            "id": "prod1title",
+            "default": "Product Name",
+            "label": "Product 1 Title"
+        },
+
+        {
+           "type": "image_picker",
+           "id": "prod2img",
+           "label": "Product 2 Image"
+       },
+
+       {
+           "type": "text",
+           "id": "prod2link",
+           "default": "http://",
+           "label": "Product 2 Link"
+       },
+
+       {
+           "type": "text",
+           "id": "prod2title",
+           "default": "Product Name",
+           "label": "Product 2 Title"
+       },
+
+       {
+          "type": "image_picker",
+          "id": "prod3img",
+          "label": "Product 3 Image"
+      },
+
+      {
+          "type": "text",
+          "id": "prod3link",
+          "default": "http://",
+          "label": "Product 3 Link"
+      },
+
+      {
+          "type": "text",
+          "id": "prod3title",
+          "default": "Product Name",
+          "label": "Product 3 Title"
+      },
+
+      {
+         "type": "image_picker",
+         "id": "prod4img",
+         "label": "Product 4 Image"
+     },
+
+     {
+         "type": "text",
+         "id": "prod4link",
+         "default": "http://",
+         "label": "Product 4 Link"
+     },
+
+     {
+         "type": "text",
+         "id": "prod4title",
+         "default": "Product Name",
+         "label": "Product 4 Title"
+     },
+
+     {
+        "type": "image_picker",
+        "id": "prod5img",
+        "label": "Product 5 Image"
+    },
+
+    {
+        "type": "text",
+        "id": "prod5link",
+        "default": "http://",
+        "label": "Product 5 Link"
+    },
+
+    {
+        "type": "text",
+        "id": "prod5title",
+        "default": "Product Name",
+        "label": "Product 5 Title"
+    },
+
+    {
+       "type": "image_picker",
+       "id": "prod6img",
+       "label": "Product 6 Image"
+   },
+
+   {
+       "type": "text",
+       "id": "prod6link",
+       "default": "http://",
+       "label": "Product 6 Link"
+   },
+
+   {
+       "type": "text",
+       "id": "prod6title",
+       "default": "Product Name",
+       "label": "Product 6 Title"
+   }
+
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name":"Glass Containers Section"
+        }
+    ]
+}
+{% endschema %}

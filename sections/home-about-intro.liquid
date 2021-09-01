@@ -1,0 +1,46 @@
+<section>
+    <div style="background-color: #FAFAFA;">
+        <div class="container">
+                <div class="text-center" style="padding-top: 200px; padding-bottom: 200px; padding-left: 20%; padding-right: 20%;">
+                    <h2 class="introblocktext">{{ section.settings.quote }}</h2>
+                    <a href="/pages/about-us" style="text-decoration: none;"><button class="mt-5 blackbutton">{{ section.settings.button }}</button></a>
+                </div>
+            </div>
+    </div>
+    
+    
+    
+    </section>
+    
+    {% schema %}
+    {
+        "name": "Home-about-intro",
+        "class": "Home-about-intro",
+        "settings": [
+    
+            {
+                "type": "text",
+                "id": "quote",
+                "default": "Example Quote",
+                "label": "Quote"
+            },
+
+            {
+                "type": "text",
+                "id": "button",
+                "default": "Learn More",
+                "label": "Button Text"
+            }
+
+    
+        ],
+        "presets": [
+            {
+                "category": "About",
+                "name":"Home-about-intro"
+            }
+        ]
+    }
+    {% endschema %}
+    
+    

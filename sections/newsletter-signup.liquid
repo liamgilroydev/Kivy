@@ -1,0 +1,62 @@
+<section class="inner-hero-section">
+    {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: '1920x760', crop: 'center' }}" alt="{{ section.settings.image.alt }}">
+    {% else %}
+        {% capture current %}{% cycle 1,2 %}{% endcapture %}
+        {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg'}}
+    {% endif %}
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col" style="bottom: 15%; position: absolute;">
+                <h1 style="font-size: 44px; color: white; font-family: NarzissRegular; font-style: normal; font-weight: normal;">{{ section.settings.title }}</h1>
+                <p class="newsletterp">{{ section.settings.subtitle }}</p>
+                
+                <div>
+                   <form action=”mailto:liam@madebyeighty.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+                        <input type="email" id="email" name="email" placeholder="Email" style="border: 2px solid white; border-radius: 0px; background-color: transparent; color: white; padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: 380px; font-family:'futura-pt';">
+                        <button type="submit" value="sumbit" style="border: 2px solid white; border-radius: 0px; background-color: white; color: black; padding-left: 10px; padding-top: 10px; padding-bottom: 9px; width: 100px; font-size: 14px; font-family:'futura-pt';">SIGN UP</button>
+                    </form>
+                </div>   
+            </div>  
+        </div>
+    </div>
+
+    
+</section>
+
+{% schema %}
+        {
+            "name": "newsletter-signup",
+            "class": "newsletter-signup",
+            "settings": [
+        
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image Background"
+                },
+        
+                {
+                    "type": "text",
+                    "id": "title",
+                    "default": "Example Title",
+                    "label": "Heading Subtitle"
+                },
+        
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "default": "Example Subtitle",
+                    "label": "Heading Title"
+                }
+        
+            ],
+            "presets": [
+                {
+                    "category": "newsletter",
+                    "name":"Newsletter Signup"
+                }
+            ]
+        }
+        {% endschema %}

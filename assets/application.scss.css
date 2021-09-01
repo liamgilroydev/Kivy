@@ -1,0 +1,449 @@
+@import url("https://use.typekit.net/cbp4kqq.css");
+
+.inner-hero-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+
+}
+
+.inner-hero-section img,
+.inner-hero-section svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1; 
+}
+
+.login-form, .forgot-password-form {
+    width: 100%; 
+    max-width: 330px;
+    margin: auto;
+}
+
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+.localeBtn {
+    background-color: #3298DB;
+    color: #fff;
+    padding: 6px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 20%;
+    max-width: 100px;
+    max-height: 70px;
+    box-shadow: -1px 0px 20px 0px #00000066;
+
+}
+
+.localeBtn img {
+    width: 50px;
+    height: 50px;
+}
+
+.dropup-content {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    min-width: 210px;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+
+.dropup:hover .dropup-content {
+    display: block;
+}
+
+.dropup-content a {
+    color: black;
+    font-size: 16px;
+    padding: 15px 10px;
+    display: block;
+    text-align: center;
+}
+
+.navlistitem { 
+    font-family:"futura-pt";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 10px;
+    color: black;
+}
+
+.blackbutton {
+    border: 2px solid black;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:"futura-pt";
+    font-weight: 100;
+    width: 150px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+.ftdcatheader{
+    text-decoration: none;
+    color: black;
+    font-family: 'NarzissRegular';
+    text-transform: uppercase;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.ftdcatheader:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.ftcatsub {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.introblocktext {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 44px;
+    font-style: normal;
+}
+
+.aboutheader {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+
+.aboutquote {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 32px;
+    font-style: normal;
+}
+
+.aboutbody {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 18px;
+    font-weight: 100;
+
+}
+
+.formfield1 {
+    border-radius: 0; 
+    border: 1px solid lightgray;
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    width: 100%;
+}
+
+.formfieldmessage {
+    border-radius: 0; 
+    border: 1px solid lightgray;
+    font-family:"futura-pt";
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    margin-top: 25px;
+    width: 100%;
+    height: 115px;
+}
+
+.enquirybutton {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family:"futura-pt";
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 25px;
+}
+
+.termsheader {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.termstext {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.termsbuttoninactive {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family:"futura-pt";
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.termsbutton {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family:"futura-pt";
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+
+.searchbox { 
+    font-family:"futura-pt";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    border: none;
+    background-color: #FAFAFA;
+}
+
+.productheader {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 32px;
+    font-style: normal;
+}
+
+.productdescription {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.cartheader {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 32px;
+    font-style: normal;
+}
+
+.cartheader2 {
+    color: black;
+    font-family: 'NarzissRegular';
+    font-size: 24px;
+    font-style: normal;
+}
+
+.cartdescription {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.cartbutton {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family:"futura-pt";
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    width: 80%;
+    font-weight: 100;
+}
+
+.cartbutton:hover {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family:"futura-pt";
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    font-weight: 100;
+}
+
+.removebtn {
+    color: black;
+    font-size: 14px;
+    font-family:"futura-pt";
+    text-align: right;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.removebtn:hover {
+    color: black;
+}
+
+.cartitemtitle {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    font-weight: 100;
+}
+
+.cartitemtitle:hover {
+    color: black;
+}
+
+.accordion {
+    cursor: pointer;
+    background-color: white;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordiondescription {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.herobutton {
+    border: 2px solid white;
+    border-radius: 0px;
+    background-color: white;
+    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100px;
+    font-size: 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family:'futura-pt';
+    font-weight: 100;
+}
+
+.relatedproducttitle {
+    text-decoration: none;
+    color: black;
+    font-family:"futura-pt";
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.menuitem {
+    font-family:"futura-pt";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 10px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 25px;
+    width: 160px;
+}
+
+.menuitem:hover {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menuimagealt {
+    font-family:"futura-pt";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    padding-top: 10px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+.newsletterp {
+    color: white;
+    font-size: 18px;
+    padding-right: 55%;
+    font-family:'futura-pt';
+    font-weight: 100;
+}
+

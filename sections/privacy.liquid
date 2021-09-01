@@ -1,0 +1,64 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-5" style="margin-top: 80px;">
+                <div class="col">
+                    <a href="/pages/shipping-returns"><button class="termsbuttoninactive" style="margin-top: 0px;">Shipping & Returns</button></a>
+                </div>
+                <div class="col">
+                    <a href="/pages/terms-conditions"><button class="termsbuttoninactive">Terms</button></a>
+                </div>
+                <div class="col">
+                    <button class="termsbutton" style="margin-top: 10px;">Privacy</button>
+                </div>
+                <div class="col">
+                    <a href="/pages/cookies-policy"><button class="termsbuttoninactive">Cookies</button></a>
+                </div>
+                    
+            </div>
+            
+        <div class="col-lg-7 mb-5" style="width: 50%; margin-top: 80px;">
+                    <h2 class="termsheader mb-4">{{ section.settings.title }}</h2>
+                    <h5 class="termstext mb-4">{{ section.settings.subtitle }}</h5>
+                    <p class="termstext mb-5">{{ section.settings.privacyinfo }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Privacy-Section",
+    "class": "Privacy-Section",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Example Title",
+            "label": "Title"
+        },
+
+        {
+            "type": "text",
+            "id": "subtitle",
+            "default": "Subtitle",
+            "label": "Subtitle"
+        },
+
+        {
+            "type": "text",
+            "id": "privacyinfo",
+            "default": "Privacy Info",
+            "label": "Privacy Info"
+        }
+
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name":"Privacy Section"
+        }
+    ]
+}
+{% endschema %}

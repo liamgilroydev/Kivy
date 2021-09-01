@@ -1,0 +1,55 @@
+<section>
+
+<div class="row mt-5">
+    <div class="col" style="float: left; margin-left: -3%;">
+        <a href="/pages/ceramic-baking-dishes"><img src="{{ section.settings.image | img_url: '700x' }}" alt="{{ section.settings.image.alt }}"></a>
+    </div>
+
+    <div class="col" style="padding-top: 300px; margin-right: 10vw;">
+        <a class="ftcatsub" href="/pages/ceramic-baking-dishes"><h5 class="ftcatsub">{{ section.settings.subtitle }}</h5></a>
+        <a class="ftdcatheader" href="/pages/ceramic-baking-dishes"><h2>{{ section.settings.title }}</h2></a>
+    </div>
+
+    <div class="col">
+      
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+    "name": "Featured-Cat-1",
+    "class": "Featured-Cat-1",
+    "settings": [
+
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Tile"
+        },
+
+        {
+            "type": "text",
+            "id": "subtitle",
+            "default": "Example Subtitle",
+            "label": "Heading Subtitle"
+        },
+
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Example Heading",
+            "label": "Heading Title"
+        }
+
+    ],
+    "presets": [
+        {
+            "category": "Collection",
+            "name":"Featured Cat 1"
+        }
+    ]
+}
+{% endschema %}
+
